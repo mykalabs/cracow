@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="images/logo1.png">
+  <title>Cracow Milk</title>
+  <!-- Behavioral Meta Data -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <!-- Styles -->
+  <link rel="stylesheet" type="text/css" href="scripts/css/style.css"/>
+
+</head>
+<body>
+  <div class="nav">
+    <div class="isi-nav">
+      <div class="part-nav"><a id="about"><img src="images/tombol.png"></a></div>
+      <div class="part-nav"><a id="menu"><img src="images/tombol.png"></a></div>
+      <div class="part-nav"><a><img class="logo" src="images/logo.png"></a></div>
+      <div class="part-nav"><a id="location"><img src="images/tombol.png"></a></div>
+      <div class="part-nav"><a id="jejaring"><img src="images/tombol.png"></a></div>
+      <!-- <li><a id="about" class="menu-web A">A</a></li>
+        <li><a id="menu" class="menu-web M">M</a></li>
+        <li><a><img class="logo" src="images/logo.png"></a></li>
+        <li><a id="location" class="menu-web">L</a></li>
+        <li><a id="jejaring" class="menu-web">S</a></li> -->
+      </div>
+    </div>
+    <div id="popup">
+      <div id="popup-menu">Menu | <a class="close-pop">X</a></div>
+      <div id="popup-location">Location | <a class="close-pop">X</a></div>
+      <div id="popup-about">About | <a class="close-pop">X</a></div>
+      <div id="popup-jejaring">Jejaring | <a class="close-pop">X</a></div>
+    </div>
+  <!-- <header>
+    <ul id="header" class="scene2">
+      <li class="layer" data-depth="1.00"><h2 id="cracow">CRACOW MILK</h2></li>
+    </ul>
+  </header> -->
+  <header>
+    <h2 id="cracow">CRACOW MILK</h2>
+  </header>
+  <topcloud>
+    <ul id="scene2" class="scene2">
+      <li class="layer" data-depth="1.00"><img src="images/cloud4.png"></li>
+      <li class="layer" data-depth="0.60"><img src="images/cloud5.png"></li>
+    </ul>
+  </topcloud>
+
+  <div id="container" class="container">
+    <ul id="scene" class="scene">
+      <li class="layer depth1" data-depth="1.00"><div><img src="images/cloud3.png"></div></li>
+      <li class="layer depth08" data-depth="0.80"><div><img src="images/cloudmid.png"></div></li>
+      <li class="layer depth06" data-depth="0.60"><div><img src="images/cloudtop.png"></div></li>
+    </ul>
+  </div>
+
+  <div class="depth09"><img src="images/bukit.png"></div>
+  
+  <!-- Scripts -->
+  <script src="scripts/js/libraries.min.js"></script>
+  <script src="scripts/js/parallax.min.js"></script>
+  <script>
+  // var header = document.getElementById('header');
+  // var parallax = new Parallax(header);
+  var scene = document.getElementById('scene');
+  var parallax = new Parallax(scene);
+  var scene2 = document.getElementById('scene2');
+  var parallax2 = new Parallax(scene2)
+  </script>
+  <script type="text/javascript" src="scripts/js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript">
+//   $(document).ready( function(){
+//     img = $('#cracow');
+//     img.fadeIn(4000);
+// });
+  </script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('h2#cracow').addClass('active');
+
+  $('a#menu').click(function(){
+    $('div#popup-menu').animate({bottom: "0%"}, 1000);
+    $('div#popup-menu').addClass('active');
+    $('.nav .isi-nav .part-nav a').addClass('inactive');
+  });
+  $('a#about').click(function(){
+    $('div#popup-about').animate({top: "0%"}, 1000);
+    $('div#popup-about').addClass('active');
+    $('.nav .isi-nav .part-nav a').addClass('inactive');
+
+  });
+  $('a#location').click(function(){
+    $('div#popup-location').animate({left: "0%"}, 1000);
+    $('div#popup-location').addClass('active');
+    $('.nav .isi-nav .part-nav a').addClass('inactive');
+  });
+  $('a#jejaring').click(function(){
+    $('div#popup-jejaring').animate({right: "0%"}, 1000);
+    $('div#popup-jejaring').addClass('active');
+    $('.nav .isi-nav .part-nav a').addClass('inactive');
+
+  });
+
+  $('div#popup-menu a.close-pop').click(function(){
+    $('div#popup-menu').animate({bottom: "-350%"}, 1000);
+    $('div#popup-menu').removeClass('active');
+    $('.nav .isi-nav .part-nav a').removeClass('inactive');
+  });
+  $('div#popup-about a.close-pop').click(function(){
+    $('div#popup-about').animate({top: "-350%"}, 1000);
+    $('div#popup-about').removeClass('active');
+    $('.nav .isi-nav .part-nav a').removeClass('inactive');
+  });
+  $('div#popup-location a.close-pop').click(function(){
+    $('div#popup-location').animate({left: "-350%"}, 1000);
+    $('div#popup-location').removeClass('active');
+    $('.nav .isi-nav .part-nav a').removeClass('inactive');
+  });
+  $('div#popup-jejaring a.close-pop').click(function(){
+    $('div#popup-jejaring').animate({right: "-350%"}, 1000);
+    $('div#popup-jejaring').removeClass('active');
+    $('.nav .isi-nav .part-nav a').removeClass('inactive');
+    
+  });
+
+});
+</script>
+</body>
+</html>
